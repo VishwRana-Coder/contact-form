@@ -15,7 +15,7 @@ This project demonstrates how to create a mobile-friendly contact form without r
 ---
 
 ## Demo Link
-Check out website here: [Visit My Portfolio](https://contact-form-vishw.netlify.app/)
+Check out website here: [Visit the Website](https://contact-form-vishw.netlify.app/)
 
 ## Video
 
