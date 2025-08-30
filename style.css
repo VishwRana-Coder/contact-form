@@ -98,7 +98,9 @@ body::before {
 .content .message-box {
   min-height: 100px;
   position: relative;
+  margin: 16px 0;
 }
+
 .content .message-box textarea {
   position: absolute;
   height: 100%;
@@ -108,29 +110,40 @@ body::before {
   border: 2px solid transparent;
   border-radius: 6px;
   outline: none;
-  padding: 5px 16px;
+  padding: 16px;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
-.content .message-box textarea:focus {
-  border-color: #2434c2;
-  background-color: #fff;
-}
+
+/* Label same as input */
 .content .message-box label {
   position: absolute;
-  font-size: 16px;
-  color: #636c72;
   left: 18px;
-  top: 6px;
+  top: 50%; /* center vertically */
+  transform: translateY(-50%);
+  color: #636c72;
+  font-size: 15px;
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.content .message-box textarea:focus ~ label {
-  left: 12px;
-  top: -10px;
-  color: #2434c2;
-  font-size: 14px;
-  background: #fff;
+
+/* Active/filled state */
+.content .message-box textarea:focus,
+.content .message-box textarea:valid {
+  border-color: #2434c2;
+  background-color: #fff;
 }
+
+.content .message-box textarea:focus ~ label,
+.content .message-box textarea:valid ~ label {
+  top: 0;
+  left: 12px;
+  font-size: 14px;
+  color: #2434c2;
+  background: #fff;
+  padding: 0 4px;
+}
+
 .content .input-box input[type="submit"] {
   color: #fff;
   background: #2434c2;
